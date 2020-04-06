@@ -44,7 +44,7 @@ public class AuthController {
         String url="https://github.com/login/oauth/access_token";
         String json= JSON.toJSONString(param);
         //2.根据传入的参数（包含code），post请求https://github.com/login/oauth/access_token，获取返回值
-        String result= httpHelper.Post(url,json);//access_token=4482374b7bc494f54a8e6b5c53470450eafde108&scope=user&token_type=bearer
+        String result= httpHelper.Post(url,json);//access_token=your_access_token&scope=user&token_type=bearer
         System.out.println( "callback result:"+result);
 
         String[] strs=result.split("&");
